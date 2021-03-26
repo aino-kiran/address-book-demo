@@ -2,6 +2,10 @@ import java.util.Scanner;
 import java.lang.*;
 public class AddressBook {
 	
+	static void Delete() {
+	    
+	    
+	  }
 	public static void main(String arg[])
 	{
 		int choice=0;
@@ -11,8 +15,8 @@ public class AddressBook {
 		do
 		{
 			add[i]=new address();
-			System.out.println("Address Book Menu");
-			System.out.println("Enter your choice \n 1. Create New Address \n 2. Show All Addresses \n 3. Exit");
+			System.out.println("_________Address Book Menu_________");
+			System.out.println("Enter your choice \n 1. Create New Address \n 2. Show All Addresses \n 3. Find Addresses Using Name \n 4. Delete Entry \n 5. Update Address \n 6. Exit");
 			
 			Scanner sc=new Scanner(System.in);
 			choice=sc.nextInt();
@@ -51,13 +55,94 @@ public class AddressBook {
 					
 				}
 				case 3:{
+					System.out.println("Enter Name For Search:");
+				    Scanner h=new Scanner(System.in);
+				    String n = h.nextLine();
+				    for(int g=0;g<i;g++) {
+				    	if (add[g].Name.contentEquals(n)==true) {
+				    		System.out.print("Name:"+add[g].Name+"\n"); 
+							System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country+", Pincode:"+add[g].Zipcode+". \n \n" );
+							try{
+								System.out.print("Press Enter To Continue..");
+								System.in.read();}
+					        catch(Exception e){}
+							break;
+				    	}
+				    	
+				    
+				    }
+				    
+			    	
+			    	
+				    break;
+					
+				}
+				
+				case 4:{
+					System.out.println("Enter Name:");
+				    Scanner s=new Scanner(System.in);
+				    String N = s.nextLine();
+				    for(int k=0;k<i;k++) {
+				    	if (add[k].Name.contentEquals(N)==true) {
+				    		add[k].Name = add[i-1].Name;
+				    		add[k].City=add[i-1].City;
+				    		add[k].Country=add[i-1].Country;
+				    		add[k].Street=add[i-1].Street;
+				    		add[k].Zipcode=add[i-1].Zipcode;
+				    		i--;
+				    		System.out.println("Succesfully Deleted.");
+				    		try{
+								System.out.print("Press Enter To Continue..");
+								System.in.read();}
+					        catch(Exception e){}
+				    		break;
+				    	}
+				    	
+				    
+				    }
+				    
+				    break;
+				}
+				case 5:{
+					System.out.println("Enter Name:");
+				    Scanner s=new Scanner(System.in);
+				    String N = s.nextLine();
+				    for(int l=0;l<i;l++) {
+				    	if (add[l].Name.contentEquals(N)==true) {
+				    		System.out.println("Enter New Address:");
+				    		System.out.print("Enter a Street: "); 
+							add[l].Street= sc.nextLine(); 
+							add[l].Street= sc.nextLine();
+							System.out.print("Enter a City: "); 
+							add[l].City= sc.nextLine(); 
+							System.out.print("Enter a Country: "); 
+							add[l].Country= sc.nextLine(); 
+							System.out.print("Enter a Zipcode: "); 
+							add[l].Zipcode= sc.nextLine(); 
+				    	
+				    		
+				    		System.out.println("Succesfully Updated.");
+				    		try{
+								System.out.print("Press Enter To Continue..");
+								System.in.read();}
+					        catch(Exception e){}
+				    		break;
+				    	}
+				    	
+				    }
+				    
+				    break;
+				}
+				case 6:{
 					System.exit(0);
 				}
 				default:{
 					System.out.print("Choice Not Exist. Try From given choice. \n");
+					break;
 				}
 			}
 		}while(true);
 	}
 
 }
+
