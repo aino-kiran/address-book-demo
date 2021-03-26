@@ -58,8 +58,11 @@ public class AddressBook {
 					System.out.println("Enter Name For Search:");
 				    Scanner h=new Scanner(System.in);
 				    String n = h.nextLine();
+				    int x=0;
 				    for(int g=0;g<i;g++) {
+				    	
 				    	if (add[g].Name.contentEquals(n)==true) {
+				    		x++;
 				    		System.out.print("Name:"+add[g].Name+"\n"); 
 							System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country+", Pincode:"+add[g].Zipcode+". \n \n" );
 							try{
@@ -72,7 +75,10 @@ public class AddressBook {
 				    
 				    }
 				    
-			    	
+			    	if(x<1) {
+			    		System.out.println("Invalid Entry:");
+			    		
+			    	}
 			    	
 				    break;
 					
@@ -82,8 +88,10 @@ public class AddressBook {
 					System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
 				    String N = s.nextLine();
+				    int y=0;
 				    for(int k=0;k<i;k++) {
 				    	if (add[k].Name.contentEquals(N)==true) {
+				    		y++;
 				    		add[k].Name = add[i-1].Name;
 				    		add[k].City=add[i-1].City;
 				    		add[k].Country=add[i-1].Country;
@@ -100,15 +108,20 @@ public class AddressBook {
 				    	
 				    
 				    }
-				    
+				    if(y<1) {
+			    		System.out.println("Invalid Entry:");
+			    		
+			    	}
 				    break;
 				}
 				case 5:{
 					System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
 				    String N = s.nextLine();
+				    int z=0;
 				    for(int l=0;l<i;l++) {
 				    	if (add[l].Name.contentEquals(N)==true) {
+				    		z++;
 				    		System.out.println("Enter New Address:");
 				    		System.out.print("Enter a Street: "); 
 							add[l].Street= sc.nextLine(); 
@@ -130,7 +143,10 @@ public class AddressBook {
 				    	}
 				    	
 				    }
-				    
+				    if(z<1) {
+			    		System.out.println("Invalid Entry:");
+			    		
+			    	}
 				    break;
 				}
 				case 6:{
@@ -145,4 +161,3 @@ public class AddressBook {
 	}
 
 }
-
