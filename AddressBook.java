@@ -26,7 +26,8 @@ public class AddressBook {
 		
 			switch(choice)
 			{
-			//case1-Add new entry in Address Book 
+			
+				//case1-Add new entry in Address Book 
 				case 1:{
 					System.out.println("Enter a Name: "); 
 					add[i].Name= sc.nextLine(); 
@@ -43,6 +44,7 @@ public class AddressBook {
 					i++;
 					break;
 				}
+				//---------------------------------------------------------------------------------------
 				//Case 2-Display all records 
 				case 2:{
 					int j;
@@ -58,6 +60,7 @@ public class AddressBook {
 					break;
 					
 				}
+				//----------------------------------------------------------------------------------------
 				//Case 3-Searching record using name 
 				case 3:{
 				    System.out.println("Enter Name For Search:");
@@ -89,6 +92,7 @@ public class AddressBook {
 				    break;
 					
 				}
+				//---------------------------------------------------------------------------
 				//Case 4- delete records using name 
 				case 4:{
 				    System.out.println("Enter Name:");
@@ -121,6 +125,7 @@ public class AddressBook {
 			    	    }
 				    break;
 				}
+				//----------------------------------------------------------------------
 				//Case 5- Update address using name 
 				case 5:{
 				    System.out.println("Enter Name:");
@@ -157,10 +162,13 @@ public class AddressBook {
 				    break;
 				}
 				
+				//---------------------------------------------------------------------------
+				
 				case 6:{
 					System.exit(0);
 				}
 				
+				//----------------------------------------------------------------------------
 				default:{
 					System.out.print("Choice Not Exist. Try From given choice. \n");
 					break;
