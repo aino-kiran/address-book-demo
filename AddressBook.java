@@ -61,7 +61,7 @@ public class AddressBook {
 				}
 				//Case 3-Searching record using name 
 				case 3:{
-					System.out.println("Enter Name For Search:");
+				    System.out.println("Enter Name For Search:");
 				    Scanner h=new Scanner(System.in);
 				    String n = h.nextLine();
 				    int x=0;
@@ -91,7 +91,7 @@ public class AddressBook {
 				}
 				//Case 4- delete records using name 
 				case 4:{
-					System.out.println("Enter Name:");
+				    System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
 				    String N = s.nextLine();
 				    int y=0;
@@ -122,7 +122,7 @@ public class AddressBook {
 				}
 				//Case 5- Update address using name 
 				case 5:{
-					System.out.println("Enter Name:");
+				    System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
 				    String N = s.nextLine();
 				    int z=0;
