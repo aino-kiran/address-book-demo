@@ -70,10 +70,11 @@ public class AddressBook {
 				    	if (add[g].Name.contentEquals(n)==true) {
 				    		x++;
 				    		System.out.print("Name:"+add[g].Name+"\n"); 
-							System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country+", Pincode:"+add[g].Zipcode+". \n \n" );
-							try{
-								System.out.print("Press Enter To Continue..");
-								System.in.read();}
+						System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country+", Pincode:"+add[g].Zipcode+". \n \n" );
+						try{
+				 			System.out.print("Press Enter To Continue..");
+							System.in.read();
+						}
 					        catch(Exception e){}
 							break;
 				    	}
@@ -81,10 +82,10 @@ public class AddressBook {
 				    
 				    }
 				    
-			    	if(x<1) {
+			    	    if(x<1) {
 			    		System.out.println("Invalid Entry:");
 			    		
-			    	}
+			    	    }
 			    	
 				    break;
 					
@@ -106,8 +107,9 @@ public class AddressBook {
 				    		i--;
 				    		System.out.println("Succesfully Deleted.");
 				    		try{
-								System.out.print("Press Enter To Continue..");
-								System.in.read();}
+							System.out.print("Press Enter To Continue..");
+							System.in.read();
+						}
 					        catch(Exception e){}
 				    		break;
 				    	}
@@ -117,7 +119,7 @@ public class AddressBook {
 				    if(y<1) {
 			    		System.out.println("Invalid Entry:");
 			    		
-			    	}
+			    	    }
 				    break;
 				}
 				//Case 5- Update address using name 
@@ -131,20 +133,19 @@ public class AddressBook {
 				    		z++;
 				    		System.out.println("Enter New Address:");
 				    		System.out.print("Enter a Street: "); 
-							add[l].Street= sc.nextLine(); 
-							add[l].Street= sc.nextLine();
-							System.out.print("Enter a City: "); 
-							add[l].City= sc.nextLine(); 
-							System.out.print("Enter a Country: "); 
-							add[l].Country= sc.nextLine(); 
-							System.out.print("Enter a Zipcode: "); 
-							add[l].Zipcode= sc.nextLine(); 
-				    	
-				    		
+						add[l].Street= sc.nextLine(); 
+						add[l].Street= sc.nextLine();
+						System.out.print("Enter a City: "); 
+						add[l].City= sc.nextLine(); 
+						System.out.print("Enter a Country: "); 
+						add[l].Country= sc.nextLine(); 
+						System.out.print("Enter a Zipcode: "); 
+						add[l].Zipcode= sc.nextLine(); 
 				    		System.out.println("Succesfully Updated.");
 				    		try{
-								System.out.print("Press Enter To Continue..");
-								System.in.read();}
+							System.out.print("Press Enter To Continue..");
+							System.in.read();
+						}
 					        catch(Exception e){}
 				    		break;
 				    	}
@@ -153,7 +154,7 @@ public class AddressBook {
 				    if(z<1) {
 			    		System.out.println("Invalid Entry:");
 			    		
-			    	}
+			    	    }
 				    break;
 				}
 				
