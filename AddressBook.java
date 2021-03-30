@@ -19,7 +19,8 @@ public class AddressBook {
 		{
 			add[i]=new address();
 			System.out.println("_________Address Book Menu_________");
-			System.out.println("Enter your choice \n 1. Create New Address \n 2. Show All Addresses \n 3. Find Addresses Using Name \n 4. Delete Entry \n 5. Update Address \n 6. Exit");
+			System.out.println("Enter your choice \n 1. Create New Address \n 2. Show All Addresses \n 3. Find Addresses Using Name \n"
+					   +"4. Delete Entry \n 5. Update Address \n 6. Exit");
 			
 			Scanner sc=new Scanner(System.in);
 			choice=sc.nextInt();
@@ -50,7 +51,8 @@ public class AddressBook {
 					int j;
 					for(j=0;j<i;j++) {
 						System.out.print("Name:"+add[j].Name+"\n"); 
-						System.out.print("Address:"+add[j].Street+", "+add[j].City+", "+add[j].Country+", Pincode:"+add[j].Zipcode+". \n \n" ); 
+						System.out.print("Address:"+add[j].Street+", "+add[j].City+", "+add[j].Country+
+								 ", Pincode:"+add[j].Zipcode+". \n \n" ); 
 					}
 					try{
 						System.out.print("Press Enter To Continue..");
@@ -72,7 +74,8 @@ public class AddressBook {
 				    	if (add[g].Name.contentEquals(n)==true) {
 				    		x++;
 				    		System.out.print("Name:"+add[g].Name+"\n"); 
-						System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country+", Pincode:"+add[g].Zipcode+". \n \n" );
+						System.out.print("Address:"+add[g].Street+", "+add[g].City+", "+add[g].Country
+								 +", Pincode:"+add[g].Zipcode+". \n \n" );
 						try{
 				 			System.out.print("Press Enter To Continue..");
 							System.in.read();
