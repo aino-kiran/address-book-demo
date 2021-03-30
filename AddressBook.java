@@ -1,16 +1,19 @@
+/*Address book menu driven Program
+ *Provided facilities are:
+ *1.Add new entries
+ *2.Show all records
+ *3.Searching records by name
+ *4.delete records by name
+ *5.update address by name  */
 import java.util.Scanner;
 import java.lang.*;
 public class AddressBook {
 	
-	static void Delete() {
-	    
-	    
-	  }
+	
 	public static void main(String arg[])
 	{
 		int choice=0;
 		int i=0;
-		char p;
 		address add[] = new address[50];
 		do
 		{
@@ -23,9 +26,10 @@ public class AddressBook {
 		
 			switch(choice)
 			{
+			//case1-Add new entry in Address Book 
 				case 1:{
 					System.out.println("Enter a Name: "); 
-					add[i].name= sc.nextLine(); 
+					add[i].Name= sc.nextLine(); 
 					add[i].Name= sc.nextLine(); 
 					System.out.print("Enter a Street: "); 
 					add[i].Street= sc.nextLine(); 
@@ -39,6 +43,7 @@ public class AddressBook {
 					i++;
 					break;
 				}
+				//Case 2-Display all records 
 				case 2:{
 					int j;
 					for(j=0;j<i;j++) {
@@ -54,6 +59,7 @@ public class AddressBook {
 					break;
 					
 				}
+				//Case 3-Searching record using name 
 				case 3:{
 					System.out.println("Enter Name For Search:");
 				    Scanner h=new Scanner(System.in);
@@ -83,7 +89,7 @@ public class AddressBook {
 				    break;
 					
 				}
-				
+				//Case 4- delete records using name 
 				case 4:{
 					System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
@@ -114,6 +120,7 @@ public class AddressBook {
 			    	}
 				    break;
 				}
+				//Case 5- Update address using name 
 				case 5:{
 					System.out.println("Enter Name:");
 				    Scanner s=new Scanner(System.in);
@@ -149,15 +156,17 @@ public class AddressBook {
 			    	}
 				    break;
 				}
+				
 				case 6:{
 					System.exit(0);
 				}
+				
 				default:{
 					System.out.print("Choice Not Exist. Try From given choice. \n");
 					break;
 				}
 			}
-		}while(true);
+		}while(true);//Infinite loop for switch case 
 	}
 
 }
