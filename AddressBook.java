@@ -52,10 +52,9 @@ public class AddressBook {
 					}
 					try{
 						System.out.print("Press Enter To Continue..");
-						System.in.read();}
-			        catch(Exception e){}
-				
-					 
+						System.in.read();
+					}
+			        	catch(Exception e){} 
 					break;
 					
 				}
