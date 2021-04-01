@@ -4,19 +4,19 @@ public class AddressBookMenu extends Menu {
 		setTitle("_______Address Book_______");
 		
 		
-		MenuItem mi1=new MenuItem("Create"); 
+		menuItem mi1=new menuItem("Create"); 
 		MI.add(mi1);  //added "create" menuItem object in list
 		           
-		MenuItem mi2=new MenuItem("Display"); 
+		menuItem mi2=new menuItem("Display"); 
 		MI.add(mi2);
 		
-		MenuItem mi3=new MenuItem("Delete"); 
+		menuItem mi3=new menuItem("Delete"); 
 		MI.add(mi3);
 		
-		MenuItem mi4=new MenuItem("Find"); 
+		menuItem mi4=new menuItem("Find"); 
 		MI.add(mi4);
 		
-		MenuItem mi5=new MenuItem("Update"); 
+		menuItem mi5=new menuItem("Update"); 
 		MI.add(mi5);
 		
 		

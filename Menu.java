@@ -11,7 +11,7 @@ public class Menu{
 		return title;
 	}
 	
-	List<RestauruntMenuItem> MI=new ArrayList<RestauruntMenuItem>();  //List for menu items
+	List<restauruntMenuItem> MI=new ArrayList<restauruntMenuItem>();  //List for menu items
     
     void display() {
     	System.out.println(title);
@@ -19,7 +19,7 @@ public class Menu{
 		Scanner sc = new Scanner(System.in);
 		char s=sc.next().charAt(0);
 		
-    	for(RestauruntMenuItem Item:MI) {  
+    	for(restauruntMenuItem Item:MI) {  
     		  int compareTwo = Character.compare(s, 'y'); 
     		  if(compareTwo==0) {          //if want display menu with serial no.
     			  System.out.print("\n"+i+": "); 
