@@ -28,7 +28,7 @@ public class Menu{
     		  }
     		  else {
     			  System.out.print("\n");
-    			  Item.display(); 
+    			  Item.display();         //called display from restauruntMenuItem class
     		  }
     		  
     	}
