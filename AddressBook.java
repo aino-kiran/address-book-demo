@@ -1,22 +1,31 @@
 /**
 *
-* @author Intern 2
+* @author Intern 2 
 * 
-*  This is an menu display application for:
-*  1. Address Book.
-*  2. Restaurant Menu
-*  
+*  This is an Address Book application performs following operations:
+*  1. New entry.
+*  2. Display all records
+*  3. Delete particular record
+*  4. Find particular record
+*  5. Update particular record
+*    
 */
+import java.util.*; 
 public class AddressBook {
+	
+	
 	public static void main(String arg[]) {
 		
-		//Address_Book_Menu abm=new Address_Book_Menu();
-		//abm.initialize();
-		//abm.display();
-		
-		Restaurant abm=new Restaurant();
-		abm.init();
+		AddressBookMenu abm=new AddressBookMenu();
+		abm.initialize();
 		abm.display();
+		
+		abm.getMenu();
+		
+		
+		
+		
+		
 	}
 
 }
